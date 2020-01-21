@@ -37,4 +37,8 @@ public class Marca {
 	public void setTelefoneContato(int telefoneContato) {
 		this.telefoneContato = telefoneContato;
 	}
+	
+	public String toString() {
+		return "Nome: " + this.nome + "\ncnpj: " + this.cnpj + "\nNome do responsavel: " + this.nomeContato + "\nTelefone de contato: " + this.telefoneContato;
+	}
 }

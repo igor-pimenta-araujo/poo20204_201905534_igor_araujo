@@ -46,5 +46,9 @@ public class Produto {
 	public void setTamanho(int tamanho) {
 		this.tamanho = tamanho;
 	}
+	
+	public String toString() {
+		return "Nome: " + this.nome + "\nCor: " + this.cor + "\nTipo: " + this.tipo + "\nEspecificacoes: " + this.especificacao+ "\nTamanho: " + this.tamanho;
+	}
 
 }
