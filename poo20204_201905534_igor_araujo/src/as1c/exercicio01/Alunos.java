@@ -2,7 +2,7 @@
  * Exercicio 1
  * */
 
-package as1c;
+package as1c.exercicio01;
 
 import java.util.Scanner;
 
