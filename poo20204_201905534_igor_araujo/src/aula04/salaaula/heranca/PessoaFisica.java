@@ -5,6 +5,8 @@ public class PessoaFisica extends Pessoa {
 	String sexo;
 	String estadoCivil;
 
+	public PessoaFisica() {}
+
 	public PessoaFisica(String nome, String endereco, String telefone, String cpf, String estadoCivil, String sexo) {
 		super(nome, endereco, telefone);
 		this.cpf = cpf;
@@ -35,13 +37,13 @@ public class PessoaFisica extends Pessoa {
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
-	
+
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		sb.append(super.toString());
-		sb.append("CPF da pessoa fisica: " + this.getCpf());
-		sb.append("Estado civil da pessoa fisica: " + this.getEstadoCivil());
-		sb.append("Sexo da pessoa fisica: " + this.getSexo());
+		sb.append("\nCPF da pessoa fisica: " + this.getCpf());
+		sb.append("\nEstado civil da pessoa fisica: " + this.getEstadoCivil());
+		sb.append("\nSexo da pessoa fisica: " + this.getSexo());
 		return sb.toString();
 	}
 

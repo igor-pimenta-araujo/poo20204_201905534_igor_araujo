@@ -3,6 +3,8 @@ package aula04.salaaula.heranca;
 public class PessoaJuridica extends Pessoa {
 	String cnpj;
 	String razaoSocial;
+	
+	public PessoaJuridica() {}
 
 	public PessoaJuridica(String nome, String endereco, String telefone, String cnpj, String razaoSocial) {
 		super(nome, endereco, telefone);

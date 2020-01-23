@@ -4,6 +4,8 @@ public class Funcionario extends PessoaFisica {
 	int matricula;
 	double salario;
 	String cargo;
+	
+	public Funcionario() {}
 
 	public Funcionario(String nome, String endereco, String telefone, String cpf, String sexo, String estadoCivil,
 			int matricula, double salario, String cargo) {

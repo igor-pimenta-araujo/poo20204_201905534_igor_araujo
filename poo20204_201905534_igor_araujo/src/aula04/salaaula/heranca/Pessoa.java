@@ -4,6 +4,8 @@ public class Pessoa {
 	String nome;
 	String endereco;
 	String telefone;
+	
+	public Pessoa() {}
 
 	public Pessoa(String n, String e, String t) {
 		this.nome = n;
@@ -37,9 +39,9 @@ public class Pessoa {
 	
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		sb.append("Nome da pessoa: " + this.getNome());
-		sb.append("Endereco da pessoa: " + this.getEndereco());
-		sb.append("Telefone da pessoa: " + this.getTelefone());
+		sb.append("\nNome da pessoa: " + this.getNome());
+		sb.append("\nEndereco da pessoa: " + this.getEndereco());
+		sb.append("\nTelefone da pessoa: " + this.getTelefone());
 		return sb.toString();
 	}
 
