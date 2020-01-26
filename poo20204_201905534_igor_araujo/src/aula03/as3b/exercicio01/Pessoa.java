@@ -2,21 +2,25 @@
  * Exercicio 01
  * */
 
-/*
- * 1) Crie uma classe para representar uma pessoa, com os atributos privados de nome, data de
-nascimento e altura. Crie os métodos públicos necessários para sets e gets e também um
-método para imprimir todos dados de uma pessoa. Crie um método para calcular a idade
-da pessoa.
- * */
-
 package aula03.as3b.exercicio01;
-
-import java.util.Date;
 
 public class Pessoa {
 	private String nome;
-	private int altura;
-	private Date dataNascimento;
+	private float altura;
+	private int idade;
+
+	private int diaNascimento;
+	private int mesNascimento;
+	private int anoNascimento;
+	
+	
+	public Pessoa(String nome, float altura, int diaNascimento, int mesNascimento, int anoNascimento) {
+		this.nome = nome;
+		this.altura = altura;
+		this.diaNascimento = diaNascimento;
+		this.mesNascimento = mesNascimento;
+		this.anoNascimento = anoNascimento;
+	}
 
 	public String getNome() {
 		return nome;
@@ -26,20 +30,58 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public int getAltura() {
+	public float getAltura() {
 		return altura;
 	}
 
-	public void setAltura(int altura) {
+	public void setAltura(float altura) {
 		this.altura = altura;
 	}
 
-	public Date getDataNascimento() {
-		return dataNascimento;
+	public int getDiaNascimento() {
+		return diaNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setDiaNascimento(int diaNascimento) {
+		this.diaNascimento = diaNascimento;
+	}
+
+	public int getMesNascimento() {
+		return mesNascimento;
+	}
+
+	public void setMesNascimento(int mesNascimento) {
+		this.mesNascimento = mesNascimento;
+	}
+
+	public int getAnoNascimento() {
+		return anoNascimento;
+	}
+
+	public void setAnoNascimento(int anoNascimento) {
+		this.anoNascimento = anoNascimento;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public int calculaIdade() {
+		int diasVividos;
+		diasVividos = ((25 - diaNascimento) + ((1 - mesNascimento) * 30) + ((2020 - anoNascimento) * 365));
+		setIdade(diasVividos/365);
+		return this.getIdade();
+	}
+
+	public void dadosPessoais() {
+		System.out.println("\nDados da pessoa:");
+		System.out.println("\nNome da pessoa:" + getNome());
+		System.out.println("\nAltura da pessoa:" + getAltura() + "cm");
+		System.out.println("\nIdade da pessoa:" + calculaIdade());
 	}
 
 }

@@ -8,8 +8,9 @@ public class Pais {
 	private List<Estado> estados;
 
 	public Pais(String nome) {
+		super();
 		this.nome = nome;
-		this.estados = new ArrayList<Estado>();
+		this.estados = estados;
 	}
 
 	public String getNome() {
@@ -28,8 +29,10 @@ public class Pais {
 		this.estados = estados;
 	}
 
-	public void adicionaEstado(Estado e) {
+	public void adicionaEstado(String sigla, String nome, Pais pais) {
+		Estado e = new Estado(sigla, nome, pais);
 		this.estados.add(e);
+		System.out.println("Adicionado com sucesso");
 	}
 
 	public Estado consultaEstado(String nome) {

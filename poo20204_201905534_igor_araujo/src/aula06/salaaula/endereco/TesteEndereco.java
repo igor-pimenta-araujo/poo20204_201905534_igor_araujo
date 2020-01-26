@@ -12,7 +12,8 @@ public class TesteEndereco {
 		Endereco end = new Endereco("520", "qd. 45", 74043010, "Residencial", bairro, log);
 
 		System.out.println(end);
-
+		
+		System.out.println("\n" + end);
 	}
 
 }

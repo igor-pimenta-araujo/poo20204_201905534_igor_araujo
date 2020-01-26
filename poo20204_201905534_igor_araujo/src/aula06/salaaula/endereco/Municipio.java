@@ -47,5 +47,4 @@ public class Municipio {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
-
 }
