@@ -20,7 +20,7 @@ public class TestaGaleria {
 		vendas.add(v1);
 		vendas.add(v2);
 		
-		vendas.toString();
+		System.out.println(vendas);
 		
 	}
 

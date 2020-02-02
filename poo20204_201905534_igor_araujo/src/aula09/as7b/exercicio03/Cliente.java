@@ -37,14 +37,10 @@ public class Cliente {
 		this.telefone = telefone;
 	}
 
-	public Venda getVenda() {
-		return venda;
+	@Override
+	public String toString() {
+		return "Cliente [nome=" + nome + ", cpf=" + cpf + ", telefone=" + telefone + "]";
 	}
-
-	public void setVenda(Venda venda) {
-		this.venda = venda;
-	}
-
 	
-
+	
 }

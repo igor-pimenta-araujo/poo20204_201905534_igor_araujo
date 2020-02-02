@@ -58,4 +58,11 @@ public class Venda {
 		this.obraVendida = obraVendida;
 	}
 
+	@Override
+	public String toString() {
+		return "Venda [diaVenda=" + diaVenda + ", mesVenda=" + mesVenda + ", anoVenda=" + anoVenda + ", cliente="
+				+ cliente + ", obraVendida=" + obraVendida + "]";
+	}
+	
+	
 }
