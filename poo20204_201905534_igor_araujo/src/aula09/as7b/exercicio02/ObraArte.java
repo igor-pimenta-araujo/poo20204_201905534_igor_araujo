@@ -99,7 +99,7 @@ public class ObraArte {
 
 	@Override
 	public String toString() {
-		return "ObraArte\nTitulo: " + titulo + "\nPreco: R$" + preco + "\nData da Criação: " + diaCriacao + "/"
+		return "\nObra de Arte:\nTitulo: " + titulo + "\nPreco: R$" + preco + "\nData da Criação: " + diaCriacao + "/"
 				+ mesCriacao + "/" + anoCriacao + "\nSituacao: " + situacao + "\nTipo: " + tipo
 				+ "\nMaterial: " + material + "\n" + artista;
 	}

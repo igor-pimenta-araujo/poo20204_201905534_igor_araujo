@@ -60,8 +60,8 @@ public class Venda {
 
 	@Override
 	public String toString() {
-		return "Venda [diaVenda=" + diaVenda + ", mesVenda=" + mesVenda + ", anoVenda=" + anoVenda + ", cliente="
-				+ cliente + ", obraVendida=" + obraVendida + "]";
+		return "\nVenda:\nData da venda: " + diaVenda + "/" + mesVenda + "/" + anoVenda
+				+ cliente + "\n" + obraVendida;
 	}
 	
 	

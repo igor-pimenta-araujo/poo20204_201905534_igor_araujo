@@ -20,7 +20,10 @@ public class TestaGaleria {
 		vendas.add(v1);
 		vendas.add(v2);
 		
-		System.out.println(vendas);
+		for (int i = 0; i < 2; i++) {
+			System.out.print("------=------=------=------");
+			System.out.println(vendas.get(i));
+		}
 		
 	}
 
