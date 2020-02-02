@@ -1,19 +1,20 @@
 package aula10.as8b.exercicio05;
 
 public class Graduacao extends EnsinoMedio {
-	private String Universidade;
+	private String universidade;
 
-	public Graduacao(String nome, int codigoFuncional, double salario, String escola, String universidade) {
-		super(nome, codigoFuncional, salario*1.5, escola);
-		Universidade = universidade;
+	public Graduacao(String nome, int codigoFuncional, String escola, String escolaMedio, String universidade, String tipoComissao) {
+		super(nome, codigoFuncional, escola, escolaMedio, tipoComissao);
+		super.acrescimo(2);
+		this.universidade = universidade;
 	}
 
 	public String getUniversidade() {
-		return Universidade;
+		return universidade;
 	}
 
 	public void setUniversidade(String universidade) {
-		Universidade = universidade;
+		this.universidade = universidade;
 	}
 	
 	

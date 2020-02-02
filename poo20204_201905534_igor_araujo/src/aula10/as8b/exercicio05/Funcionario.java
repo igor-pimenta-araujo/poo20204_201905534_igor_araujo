@@ -4,8 +4,9 @@ public abstract class Funcionario {
 	private String nome;
 	private int codigoFuncional;
 	private double salario;
+	private double comissao;
 
-	public Funcionario(String nome, int codigoFuncional, double salario) {
+	public Funcionario(String nome, int codigoFuncional) {
 		super();
 		this.nome = nome;
 		this.codigoFuncional = codigoFuncional;
@@ -36,4 +37,27 @@ public abstract class Funcionario {
 		this.salario = salario;
 	}
 
+	public double getComissao() {
+		return comissao;
+	}
+
+	public void setComissao(double comissao) {
+		this.comissao = comissao;
+	}
+
+	// Exercicio 06
+	protected void acrescimo(double porcentagem) {
+		setSalario(getSalario() * porcentagem);
+	}
+
+	// Exercicio 11
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		System.out.println("\nDados do funcionario:");
+		sb.append("Nome: " + this.getNome());
+		sb.append("\nComissão: " + this.getComissao());
+		sb.append("\nSalario total: " + (this.getSalario() + this.getComissao()));
+		return sb.toString();
+	}
+	
 }
