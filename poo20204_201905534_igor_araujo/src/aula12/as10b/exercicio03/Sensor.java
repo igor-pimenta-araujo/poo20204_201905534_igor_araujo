@@ -7,6 +7,7 @@ import java.util.Observer;
 
 public class Sensor extends Observable{
 	private List<Observer> alarmes = new ArrayList<Observer>();
+	Alarme a = new Alarme();
 	
 	public void sensorAtivado() {
 		this.notifyObservers();
@@ -15,9 +16,8 @@ public class Sensor extends Observable{
 	
 	public void notifyObservers() {
 		System.out.println("O sensor detectou algo suspeito");
-		for(Observer observador : alarmes) {
 			System.out.println("Notificando alarme");
-		}
+			a.update();
 	}
 	
 	public void registerObserver(Observer observador) {

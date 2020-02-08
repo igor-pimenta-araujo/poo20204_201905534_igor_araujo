@@ -7,6 +7,8 @@ import java.util.Observer;
 
 public class Alarme extends Observable implements Observer {
 	private List<Observer> observers = new ArrayList<Observer>();
+	Policia p = new Policia();
+	Seguradora s = new Seguradora();
 
 	@Override
 	public void update(Observable o, Object arg) {
@@ -14,7 +16,9 @@ public class Alarme extends Observable implements Observer {
 	}
 
 	public void update() {
-
+		System.out.println("Alarme acionado....\n....Notificando Policia e Companhia de Seguros:");
+		p.update();
+		s.update();
 	}
 
 	public void registerObserver(Observer observer) {

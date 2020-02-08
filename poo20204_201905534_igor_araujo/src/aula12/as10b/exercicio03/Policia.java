@@ -9,5 +9,9 @@ public class Policia implements Observer {
 	public void update(Observable o, Object arg) {
 		
 	}
-
+	
+	public void update() {
+		System.out.println("--- Policia notificada ---");
+	}
+	
 }
