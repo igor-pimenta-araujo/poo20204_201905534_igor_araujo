@@ -13,6 +13,8 @@ public class Pessoa {
 	private int mesNascimento;
 	private int anoNascimento;
 	
+	public Pessoa() {}
+	
 	
 	public Pessoa(String nome, float altura, int diaNascimento, int mesNascimento, int anoNascimento) {
 		this.nome = nome;
