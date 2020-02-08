@@ -1,11 +1,9 @@
-/*
- * Exercicio 02
- * */
+package aula13.as11.exercicio05;
 
-package aula03.as3b.exercicio02;
- 
 import java.util.ArrayList;
 import java.util.List;
+
+import aula03.as3b.exercicio02.Pessoa;
 
 public class Agenda {
 	private int size = 0;
@@ -24,7 +22,7 @@ public class Agenda {
 	public void setPessoas(List<Pessoa> pessoas) {
 		this.pessoas = pessoas;
 	}
-	
+
 	public void armazenaPessoa(String nome, int idade, float altura) {
 		Pessoa p = new Pessoa(nome, idade, altura);
 		if (size < 10) {
@@ -35,10 +33,10 @@ public class Agenda {
 			System.out.println("\nERRO: A lista ja está cheia!");
 		}
 	}
-	
+
 	public void removePessoa(String nomeSelecionado) {
 		for (i = 0; i < size; i++) {
-			if(pessoas.get(i).getNome() == nomeSelecionado) {
+			if (pessoas.get(i).getNome() == nomeSelecionado) {
 				Pessoa p = pessoas.get(i);
 				this.pessoas.remove(p);
 				size--;
@@ -47,11 +45,11 @@ public class Agenda {
 				break;
 			}
 		}
-		if(verificador == false) {
+		if (verificador == false) {
 			System.out.println("\nPessoa não encontrada");
-		}else {
+		} else {
 			verificador = false;
-		} 
+		}
 	}
 	
 	public void imprimeAgenda() {
@@ -61,15 +59,26 @@ public class Agenda {
 			System.out.println("Idade: " + p.getIdade());
 		}
 	}
+	
+	public String percorreAgenda() {
+		String string = "";
+		for(Pessoa p : this.pessoas) {
+			string += "Nome: " + p.getNome() + "\nAltura: " + p.getAltura() + "\nIdade: " + p.getIdade() + "\n\n";
+			/*System.out.println("\nNome: " + p.getNome());
+			System.out.println("Altura: " + p.getAltura());
+			System.out.println("Idade: " + p.getIdade());*/
+		}
+		return string;
+	}
 
 	public void imprimePessoa(int index) {
-		if(index < size) {
-		System.out.println("\nNome: " + pessoas.get(index).getNome());
-		System.out.println("Altura: " + pessoas.get(index).getAltura());
-		System.out.println("Idade: " + pessoas.get(index).getIdade());
-	}else {
-		System.out.println("\nERRO: Pessoa não encontrada \nDigite um número de 0 até " + (size-1));
-	}
+		if (index < size) {
+			System.out.println("\nNome: " + pessoas.get(index).getNome());
+			System.out.println("Altura: " + pessoas.get(index).getAltura());
+			System.out.println("Idade: " + pessoas.get(index).getIdade());
+		} else {
+			System.out.println("\nERRO: Pessoa não encontrada \nDigite um número de 0 até " + (size - 1));
+		}
 	}
 
 }

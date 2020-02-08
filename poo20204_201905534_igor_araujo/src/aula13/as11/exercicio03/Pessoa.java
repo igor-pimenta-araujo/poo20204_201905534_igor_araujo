@@ -1,15 +1,11 @@
-/*
- * Exercicio 02
- * */
+package aula13.as11.exercicio03;
 
-package aula03.as3b.exercicio02;
- 
 public class Pessoa {
 	private String nome;
 	private int idade;
-	private float altura;
+	private int altura;
 
-	public Pessoa(String nome, int idade, float altura) {
+	public Pessoa(String nome, int idade, int altura) {
 		super();
 		this.nome = nome;
 		this.idade = idade;
@@ -32,14 +28,11 @@ public class Pessoa {
 		this.idade = idade;
 	}
 
-	public float getAltura() {
+	public int getAltura() {
 		return altura;
 	}
 
-	public void setAltura(float altura) {
+	public void setAltura(int altura) {
 		this.altura = altura;
 	}
-
-	// public Pessoa() {}
-
 }

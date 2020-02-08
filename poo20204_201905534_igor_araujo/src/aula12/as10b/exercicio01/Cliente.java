@@ -1,9 +1,9 @@
 package aula12.as10b.exercicio01;
 
 public class Cliente {
-	private SomadorEsperado somador;
+	private AdaptadorSomador somador;
 
-	private Cliente(SomadorEsperado somador) {
+	public Cliente(AdaptadorSomador somador) {
 		this.somador = somador;
 	}
 

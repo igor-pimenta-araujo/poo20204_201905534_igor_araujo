@@ -3,7 +3,7 @@ package aula11.as9b.exercicio03;
 public class Incremental {
 	public static Incremental instancia = new Incremental();
 	private static int count = 0;
-	private int numero;
+	private int numero ;
 
 	protected Incremental() {
 		numero = ++count;
